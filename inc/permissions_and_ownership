@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Proactively fix Libreoffice "permission denied" error
+sudo chmod -R 777 /var/spool/libreoffice
+
+# Workaround www-data shell limitations
+# REMOVE AFTER INSTALLATION????
+sudo chsh -s /bin/bash www-data
+sudo chown -R www-data.www-data /var/www
